@@ -35,7 +35,6 @@ export default function Navbar() {
           Dolapo<span className="text-accent">.</span>
         </a>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex gap-8">
             {links.map((link) => (
@@ -50,7 +49,6 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Theme toggle */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
@@ -60,7 +58,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile: theme + hamburger */}
         <div className="md:hidden flex items-center gap-3">
           <button
             onClick={toggleTheme}

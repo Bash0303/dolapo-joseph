@@ -25,7 +25,6 @@ export default function Contact() {
 
         <Reveal delay={0.15}>
           <div className="grid md:grid-cols-2 gap-10">
-            {/* Left column: contact info */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-cyan-500/10 rounded-lg text-cyan-500 dark:text-cyan-400 text-xl">
@@ -34,7 +33,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold">Email</h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    dolapo.joseph@example.com
+                    ifedolapojoseph73@gmail.com
                   </p>
                 </div>
               </div>
@@ -46,7 +45,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold">Phone</h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    +234 800 000 0000
+                    +234 (available on request)
                   </p>
                 </div>
               </div>
@@ -57,14 +56,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Location</h3>
-                  <p className="text-slate-600 dark:text-slate-400">
-                    Lagos, Nigeria
-                  </p>
+                  <p className="text-slate-600 dark:text-slate-400">Nigeria</p>
                 </div>
               </div>
             </div>
 
-            {/* Right column: form */}
             <form onSubmit={handleSubmit} className="card space-y-4">
               <input
                 type="text"
