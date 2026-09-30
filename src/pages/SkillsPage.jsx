@@ -8,11 +8,9 @@ import {
   FiPieChart,
   FiGitBranch,
 } from "react-icons/fi";
-import Reveal from "./Reveal";
+import Reveal from "../components/Reveal";
 
-/* ─────────────────────────────────────────
-   DATA
-   ───────────────────────────────────────── */
+
 const coreSkills = [
   {
     icon: <FiGrid />,
@@ -234,9 +232,7 @@ const stack = [
   },
 ];
 
-/* ─────────────────────────────────────────
-   COMPONENT
-   ───────────────────────────────────────── */
+
 export default function SkillsPage() {
   return (
     <div id="skills" className="pt-32 pb-24 px-6">
@@ -257,7 +253,7 @@ export default function SkillsPage() {
         </Reveal>
       </section>
 
-      {/* ── 02: CORE TECHNICAL SKILLS ── */}
+    
       <section className="max-w-6xl mx-auto mb-24">
         <Reveal>
           <p className="text-accent font-semibold mb-3 tracking-widest text-sm">
@@ -305,7 +301,7 @@ export default function SkillsPage() {
         </div>
       </section>
 
-      {/* ── 03: TOOLS & TECHNOLOGIES ── */}
+      
       <section className="max-w-6xl mx-auto mb-24">
         <Reveal>
           <p className="text-accent font-semibold mb-3 tracking-widest text-sm">
@@ -328,7 +324,7 @@ export default function SkillsPage() {
         </Reveal>
       </section>
 
-      {/* ── 04: ANALYTICAL CAPABILITIES ── */}
+     
       <section className="max-w-6xl mx-auto mb-24">
         <Reveal>
           <p className="text-accent font-semibold mb-3 tracking-widest text-sm">

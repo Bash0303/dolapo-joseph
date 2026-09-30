@@ -1,28 +1,36 @@
-import Reveal from "./Reveal";
+import Reveal from "../components/Reveal";
 
-export default function About() {
+export default function AboutPage() {
   return (
-    <section id="about" className="py-24 px-6">
+    <div className="pt-32 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <h2 className="section-title">About Me</h2>
+          <p className="text-accent font-semibold mb-3 tracking-widest text-sm">
+            ABOUT ME
+          </p>
+          <h1 className="section-title">About Me</h1>
         </Reveal>
 
         <Reveal delay={0.15}>
           <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
             <div className="space-y-6 text-slate-700 dark:text-slate-300">
               <p>
-                I'm a data analyst with 5+ years of experience helping
-                businesses uncover insights hidden in their data. I specialize
-                in building dashboards, automating reports, and applying
-                statistical models to solve real-world problems.
+                I'm a data analyst with a strong foundation in Business
+                Analytics, Geology and scientific research — a combination
+                that lets me approach data problems from multiple angles.
               </p>
               <p>
-                My toolkit spans Python, R, SQL, Tableau, Power BI, and cloud
-                platforms like AWS and BigQuery. I thrive at the intersection
-                of technical analysis and business strategy, translating
-                complex data into stories stakeholders can act on.
+                My toolkit spans Excel, SQL, Power BI, Python, and Data
+                Modelling. I specialize in building dashboards, automating
+                reports, and applying statistical thinking to solve
+                real-world problems.
               </p>
+              <p>
+                I thrive at the intersection of technical analysis and
+                business strategy, translating complex data into stories
+                stakeholders can act on.
+              </p>
+
               <div className="grid grid-cols-3 gap-6 pt-6">
                 <div>
                   <p className="text-4xl font-bold text-accent">5+</p>
@@ -50,16 +58,17 @@ export default function About() {
                 Quick Facts
               </h3>
               <ul className="space-y-3 text-slate-700 dark:text-slate-300">
-                <li>📍 Based in Lagos, Nigeria (Remote-friendly)</li>
-                <li>🎓 BSc. Statistics, University of Lagos</li>
+                <li>📍 Based in Nigeria (Remote-friendly)</li>
+                <li>🎓 Background in Geology & Business Analytics</li>
                 <li>📊 Google Data Analytics Certified</li>
-                <li>🏆 Kaggle Competitions Expert</li>
+                <li>🏆 Kaggle Competitions Enthusiast</li>
+                <li>🔬 Scientific research background</li>
                 <li>☕ Coffee-driven problem solver</li>
               </ul>
             </div>
           </div>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }

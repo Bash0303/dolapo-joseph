@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import useTheme from "../hooks/useTheme";
 
 const links = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", to: "/" },
+  { name: "About", to: "/about" },
+  { name: "Skills", to: "/skills" },
+  { name: "Projects", to: "/projects" },
+  { name: "Experience", to: "/experience" },
+  { name: "Contact", to: "/contact" },
 ];
 
 export default function Navbar() {
@@ -22,29 +23,31 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const linkClass = ({ isActive }) =>
+    `font-medium transition-colors hover:text-accent ${
+      isActive ? "text-accent" : ""
+    }`;
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all ${
         scrolled
           ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur shadow-lg"
-          : "bg-transparent"
+          : "bg-white/70 dark:bg-slate-900/70 backdrop-blur"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold">
+        <NavLink to="/" className="text-2xl font-bold">
           Dolapo<span className="text-accent">.</span>
-        </a>
+        </NavLink>
 
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex gap-8">
             {links.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="hover:text-accent transition-colors font-medium"
-                >
+                <NavLink to={link.to} className={linkClass} end={link.to === "/"}>
                   {link.name}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -76,13 +79,14 @@ export default function Navbar() {
         <ul className="md:hidden bg-white dark:bg-slate-900 px-6 py-4 space-y-3 border-t border-slate-200 dark:border-slate-700">
           {links.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
+              <NavLink
+                to={link.to}
                 onClick={() => setIsOpen(false)}
-                className="block py-2 hover:text-accent"
+                className={linkClass}
+                end={link.to === "/"}
               >
                 {link.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

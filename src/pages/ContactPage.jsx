@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
-import Reveal from "./Reveal";
+import Reveal from "../components/Reveal";
 
-export default function Contact() {
+export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
@@ -14,10 +14,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
+    <div className="pt-32 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <h2 className="section-title">Get In Touch</h2>
+          <p className="text-accent font-semibold mb-3 tracking-widest text-sm">
+            CONTACT
+          </p>
+          <h1 className="section-title">Get In Touch</h1>
           <p className="text-slate-600 dark:text-slate-400 mb-12">
             Have a project or role in mind? Let's talk data.
           </p>
@@ -45,7 +48,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold">Phone</h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    +234 (available on request)
+                    091-580-7531
                   </p>
                 </div>
               </div>
@@ -98,6 +101,6 @@ export default function Contact() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }
