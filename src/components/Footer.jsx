@@ -1,16 +1,32 @@
 import { Link } from "react-router-dom";
 import { FiMail, FiMapPin } from "react-icons/fi";
 
+const quickLinks = [
+  { name: "About", to: "/about" },
+  { name: "Skills", to: "/skills" },
+  { name: "Projects", to: "/projects" },
+  { name: "Experience", to: "/experience" },
+  { name: "Contact", to: "/contact" },
+];
+
+const topics = [
+  "Business Analytics",
+  "Data Visualization",
+  "Data Modelling",
+  "Statistics",
+  "Data Engineering",
+];
+
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-800 py-12 px-6 mt-12">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+    <footer className="mt-12 border-t border-slate-200 px-6 py-14 dark:border-slate-800">
+      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
         <div>
-          <h3 className="text-2xl font-bold mb-2">
-            Dolapo<span className="text-accent">.</span>
+          <h3 className="mb-2 text-2xl font-bold uppercase tracking-wide">
+            Dolapo Joseph
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
-            Data Analyst | Business Analytics | Geology & Scientific Data
+          <p className="mb-3 text-sm text-slate-600 dark:text-slate-400">
+            Data Analyst | Business Analytics | Geology &amp; Scientific Data
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-400">
             Turning data into meaningful insights through analysis,
@@ -19,28 +35,31 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-bold mb-4 uppercase text-sm tracking-widest">
+          <h4 className="mb-4 text-sm font-bold uppercase tracking-widest">
             Quick Links
           </h4>
           <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-            <li><Link to="/about" className="hover:text-accent transition-colors">About</Link></li>
-            <li><Link to="/skills" className="hover:text-accent transition-colors">Skills</Link></li>
-            <li><Link to="/projects" className="hover:text-accent transition-colors">Projects</Link></li>
-            <li><Link to="/experience" className="hover:text-accent transition-colors">Experience</Link></li>
-            <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+            {quickLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.to}
+                  className="transition-colors hover:text-accent"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
-          <h4 className="font-bold mb-4 uppercase text-sm tracking-widest">
-            Expertise
+          <h4 className="mb-4 text-sm font-bold uppercase tracking-widest">
+            Topics
           </h4>
-          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
-            <li>Data Analysis</li>
-            <li>Data Visualization</li>
-            <li>Data Modelling</li>
-            <li>Business Intelligence</li>
-            <li>Statistical Analysis</li>
+          <ul className="mb-6 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            {topics.map((topic) => (
+              <li key={topic}>{topic}</li>
+            ))}
           </ul>
 
           <div className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
@@ -54,9 +73,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} Dolapo Joseph.
-        
+      <div className="mx-auto mt-10 max-w-6xl border-t border-slate-200 pt-6 text-center text-sm dark:border-slate-800">
+        <p className="text-slate-500">
+          © 2026 Dolapo Joseph. All rights reserved.
+        </p>
+        <p className="mt-1 text-slate-500">
+          Built with <span className="text-rose-500">❤️</span> and data
+        </p>
       </div>
     </footer>
   );

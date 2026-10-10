@@ -90,7 +90,7 @@ export default function Home() {
             <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/30 via-violet-500/20 to-cyan-500/30 rounded-3xl blur-2xl" />
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden border-4 border-cyan-500/40 shadow-2xl">
              <img
-                src="/dolapo.png"    
+                src={dolapo}
                 alt="Dolapo Joseph"
                 className="w-full h-full object-cover"
             />
