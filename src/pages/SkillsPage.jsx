@@ -5,7 +5,6 @@ import {
   FiGrid,
   FiTrendingUp,
   FiLayers,
-  FiPieChart,
   FiGitBranch,
 } from "react-icons/fi";
 import Reveal from "../components/Reveal";

@@ -65,10 +65,20 @@ export default function Home() {
             </div>
 
             <div className="flex gap-6 text-2xl">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a
+                href="https://github.com/ifedolapojoseph73-create"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
                 <FiGithub />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.linkedin.com/in/dolapo-joseph-719207128"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
                 <FiLinkedin />
               </a>
               <a href="#" className="hover:text-accent transition-colors">

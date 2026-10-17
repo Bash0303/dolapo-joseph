@@ -143,9 +143,9 @@ const projects = [
 
 const stats = [
   {
-    value: 8,
+    value: 10,
     suffix: "+",
-    label: "Featured Projects",
+    label: "Projects Delivered",
     note: "Across multiple analytical domains",
   },
   {

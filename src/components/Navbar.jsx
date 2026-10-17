@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
+import { NavLink, Link } from "react-router-dom";
+import { FiMenu, FiX, FiSun, FiMoon, FiArrowRight } from "react-icons/fi";
 import useTheme from "../hooks/useTheme";
 
 const links = [
-  { name: "Home", to: "/" },
   { name: "About", to: "/about" },
   { name: "Skills", to: "/skills" },
   { name: "Projects", to: "/projects" },
   { name: "Experience", to: "/experience" },
+  { name: "Certifications", to: "/certifications" },
   { name: "Contact", to: "/contact" },
 ];
 
@@ -37,12 +37,17 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <NavLink to="/" className="text-2xl font-bold">
-          Dolapo<span className="text-accent">.</span>
+        <NavLink to="/" className="leading-tight">
+          <span className="block text-xl font-bold uppercase tracking-wide">
+            DJ. Dolapo Joseph
+          </span>
+          <span className="hidden text-[11px] font-medium text-slate-500 dark:text-slate-400 lg:block">
+            Data Analyst | Business Analytics | Geology &amp; Scientific Data
+          </span>
         </NavLink>
 
-        <div className="hidden md:flex items-center gap-8">
-          <ul className="flex gap-8">
+        <div className="hidden lg:flex items-center gap-8">
+          <ul className="flex gap-7">
             {links.map((link) => (
               <li key={link.name}>
                 <NavLink to={link.to} className={linkClass} end={link.to === "/"}>
@@ -59,9 +64,17 @@ export default function Navbar() {
           >
             {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
+
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-slate-900 transition-all hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/30"
+          >
+            Let&apos;s Talk
+            <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
         </div>
 
-        <div className="md:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
@@ -76,7 +89,7 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <ul className="md:hidden bg-white dark:bg-slate-900 px-6 py-4 space-y-3 border-t border-slate-200 dark:border-slate-700">
+        <ul className="lg:hidden bg-white dark:bg-slate-900 px-6 py-4 space-y-3 border-t border-slate-200 dark:border-slate-700">
           {links.map((link) => (
             <li key={link.name}>
               <NavLink
@@ -89,6 +102,16 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-slate-900"
+            >
+              Let&apos;s Talk
+              <FiArrowRight />
+            </Link>
+          </li>
         </ul>
       )}
     </nav>

@@ -33,13 +33,13 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-3 gap-6 pt-6">
                 <div>
-                  <p className="text-4xl font-bold text-accent">5+</p>
+                  <p className="text-4xl font-bold text-accent">4+</p>
                   <p className="text-slate-600 dark:text-slate-400">
                     Years Experience
                   </p>
                 </div>
                 <div>
-                  <p className="text-4xl font-bold text-accent">40+</p>
+                  <p className="text-4xl font-bold text-accent">10+</p>
                   <p className="text-slate-600 dark:text-slate-400">
                     Projects Delivered
                   </p>
