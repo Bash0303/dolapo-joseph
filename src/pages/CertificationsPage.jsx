@@ -14,6 +14,8 @@ const certificates = [
     issuer: "Axia Africa — School of Data",
     date: "Sep 27, 2025",
     credential: "AX83332205",
+    description:
+      "Completed a comprehensive program covering data analysis, data visualization and business intelligence using real-world datasets.",
     skills: ["Data Analysis", "Excel", "Reporting"],
     image: axiaAnalysisImg,
     accent: "cyan",
@@ -24,6 +26,8 @@ const certificates = [
     issuer: "Axia Africa — School of Data",
     date: "Apr 17, 2026",
     credential: "AX43700669",
+    description:
+      "Gained practical skills in machine learning, statistical analysis and data-driven problem solving using Python.",
     skills: ["Data Science", "Statistical Analysis", "Modelling"],
     image: axiaScienceImg,
     accent: "violet",
@@ -48,6 +52,8 @@ const certificates = [
     issuer: "The Data Immersed Community",
     date: "Nov 1, 2025",
     credential: "6-Month Program",
+    description:
+      "Completed an intensive data analysis program covering data cleaning, transformation, analysis and visualization using Excel, SQL and Power BI.",
     skills: ["Excel", "SQL", "Power BI"],
     image: dataImmersedImg,
     accent: "rose",
@@ -135,6 +141,12 @@ export default function CertificationsPage() {
                         {cert.credential}
                       </span>
                     </div>
+
+                    {cert.description && (
+                      <p className="mb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                        {cert.description}
+                      </p>
+                    )}
 
                     <div className="mt-auto">
                       <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">

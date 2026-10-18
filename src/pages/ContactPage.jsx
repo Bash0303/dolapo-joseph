@@ -48,7 +48,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold">Phone</h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    091-580-7531
+                    0915 806 7531
                   </p>
                 </div>
               </div>
